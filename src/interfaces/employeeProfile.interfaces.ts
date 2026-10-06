@@ -6,7 +6,9 @@ export interface EmployeeProjects {
   memberProjects: Project[];
 }
 
-export interface EmployeeProfileProps { employee: Employee; }
+export interface EmployeeProfileProps {
+  employee: Employee;
+}
 export interface EmployeeProjectListProps {
   title: string;
   description: string;

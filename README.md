@@ -1,4 +1,4 @@
-# OpsFlow
+# Alinvero
 
 Employee and project management learning project built with React, TypeScript, and
 Vite. The current implementation supports a locally persisted employee directory

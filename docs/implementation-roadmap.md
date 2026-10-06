@@ -1,4 +1,4 @@
-# OpsFlow implementation and learning roadmap
+# Alinvero implementation and learning roadmap
 
 Reference: OpsFlow Technical Product Specification, version 1.0, September 2026.
 
@@ -592,7 +592,7 @@ remains pending due to the existing session blocker.
 
 ## Checkpoint 25 — corrected project-based completion reporting
 
-User clarified that OpsFlow is not a personal task tracking application. My tasks
+User clarified that Alinvero is not a personal task tracking application. My tasks
 navigation is removed and the former route redirects to Projects. Employees now
 see only their assigned task cards inside a project, with the completion editor
 embedded in the selected card. They cannot create, assign, reassign, or schedule
@@ -662,7 +662,7 @@ specified /dashboard route with existing /overview links.
 ## Checkpoint 29 - Login-first workspace boundary
 
 - `routes/RequireSession.tsx` gates the entire application shell, including direct links. The login page stays public; successful sign-in restores an allowlisted internal destination.
-- `services/auth/sessionService.ts` provides disposable demo authentication. Credentials shown on login: admin@opsflow.demo / OpsFlowDemo!23. Session state is memory-only: reloading requires sign-in. This is a frontend demonstration, not production security or real employee identity verification.
+- `services/auth/sessionService.ts` provides disposable demo authentication. Credentials shown on login: admin@alinvero.demo / AlinveroDemo!23. Session state is memory-only: reloading requires sign-in. This is a frontend demonstration, not production security or real employee identity verification.
 - `context/AuthProvider.tsx` exposes session/sign-in/sign-out alongside existing demo role permissions. Service mutation permission checks also require a session.
 - `hooks/auth/useLoginForm.ts` owns validation and submission state. Components render the form and sign-out action; session interfaces and styling remain separate.
 - Sign-out unmounts protected content and resets demo identity. Saved mock business records remain available after the next sign-in. Save/discard dirty forms before signing out.
@@ -680,3 +680,9 @@ Component styles use these tokens across the shell, login/showcase, overview, em
 The active palette now uses indigo #6366F1, navy #0F172A, supporting blue #3B82F6 and violet #8B5CF6. White cards sit on #F8FAFF with #EEF2FF selected surfaces. Shared semantic tokens cover emerald success, amber warning, and red errors, with darker readable text variants. Button fills and small links use #4F46E5 for stronger contrast than the decorative indigo.
 
 Changes cover shared tokens, shell selection and focus states, login/showcase, dashboard/chart, employee and project pages, forms and dialogs. Existing layout and application logic are preserved. Build and lint passed; checked core text pairs exceed 4.5:1. Browser visual verification is still pending.
+
+## Application rename: Alinvero
+
+Public-facing branding, browser titles, package metadata, seed account emails, login credentials, showcase and documentation now use Alinvero. Demo login: admin@alinvero.demo / AlinveroDemo!23.
+
+Compatibility: existing opsflow.* browser-storage keys and the project write-lock name are deliberately retained to preserve saved employees, projects, retired IDs/codes, and coordination with existing tabs. Stored employee data is not rewritten. The original specification title remains an accurate historical reference. The local project directory is unchanged.

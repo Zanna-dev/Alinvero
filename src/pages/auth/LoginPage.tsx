@@ -13,11 +13,11 @@ export function LoginPage() {
     <main className={styles.page}>
       <div className={styles.frame}>
       <section className={styles.formPanel} aria-labelledby="login-heading">
-        <a className={styles.brand} href="/login" aria-label="OpsFlow sign in">
+        <a className={styles.brand} href="/login" aria-label="Alinvero sign in">
           <span>
             <FiLayers aria-hidden="true" />
           </span>
-          opsflow<span className={styles.brandDot}>.</span>
+          alinvero<span className={styles.brandDot}>.</span>
         </a>
         <div className={styles.formContent}>
           <p className={styles.eyebrow}>WORKSPACE ACCESS</p>
@@ -32,7 +32,7 @@ export function LoginPage() {
         </div>
         <footer className={styles.footer}>
           <span>Space for people. Focus for work.</span>
-          <span>OPSFLOW</span>
+          <span>ALINVERO</span>
         </footer>
       </section>
       <AuthShowcase />

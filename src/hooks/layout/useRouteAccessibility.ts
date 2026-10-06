@@ -8,7 +8,7 @@ export function useRouteAccessibility() {
 
   useEffect(() => {
     const section = pathname === "/my-tasks" ? "My tasks" : pathname.startsWith("/employees") ? "People" : pathname.startsWith("/projects") ? "Projects" : pathname === "/overview" || pathname === "/" ? "Overview" : "Page not found";
-    document.title = `${section} | OpsFlow`;
+    document.title = `${section} | Alinvero`;
     // Keep initial focus natural, but provide a predictable starting point after navigation.
     if (previousPath.current !== pathname) {
       mainRef.current?.focus({ preventScroll: true });

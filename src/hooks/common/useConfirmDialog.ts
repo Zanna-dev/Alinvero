@@ -7,8 +7,10 @@ export function useConfirmDialog(pending: boolean, onCancel: () => void, fallbac
   useEffect(() => {
     const dialog = dialogRef.current;
     const previousFocus = document.activeElement;
+
     dialog?.showModal();
     cancelRef.current?.focus();
+    
     return () => {
       dialog?.close();
       if (previousFocus instanceof HTMLElement && previousFocus.isConnected && !previousFocus.matches(":disabled")) {

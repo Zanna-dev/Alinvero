@@ -10,10 +10,10 @@ export function subscribeSession(listener: () => void) {
 }
 export async function signIn(input: SignInInput) {
   await new Promise<void>((resolve) => window.setTimeout(resolve, 400));
-  if (input.email.trim().toLowerCase() !== "admin@opsflow.demo" || input.password !== "OpsFlowDemo!23") {
+  if (input.email.trim().toLowerCase() !== "admin@alinvero.demo" || input.password !== "AlinveroDemo!23") {
     throw new Error("The email or password is incorrect.");
   }
-  session = { name: "Demo administrator", email: "admin@opsflow.demo" };
+  session = { name: "Demo administrator", email: "admin@alinvero.demo" };
   listeners.forEach((listener) => listener());
 }
 export function signOut() {
